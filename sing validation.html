@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <style>
+            body{
+                background-image: url(https://images.hdqwalls.com/wallpapers/lake-sky-stars-sunset-4k-sk.jpg);
+            }
+            form{
+                width: 400;
+                height: 450;
+                background-color: transparent;
+                border: 2px solid rgba(255,255,255,.5);
+                border-radius: 20px;
+                backdrop-filter: blur(20px);
+                
+            }
+            input{
+                background-color: transparent;
+                outline: none;
+                color: white;
+                border: none;
+                border-bottom: 3px solid black;
+                
+                
+            }
+            #ab{
+                color:white;
+                background:#162938;
+                width: 200;
+                height: 45PX;
+                font-size: 20;
+                border: none;
+                outline: none;
+                border-radius: 6px;
+            
+
+            }
+        </style>
+    </head>
+    <body>
+        
+        <center>
+            
+            <form name="sm" onsubmit="return validform()" method="post" action="https://www.instagram.com/mass_vicky__vikas" >
+                <h2 style="color: aliceblue;">SIGN UP</h2>
+                <!-- Enter your First name: -->
+                <input type="text" name="fname" pattern="[A-Za-z]{3,}" title="name must contain only alphabets" placeholder="🧖‍♂️First name" style="width: 250; height:30;" autofocus required/><br><br>
+                <!-- Enter your Last name: -->
+                <input type="text" name="lname" pattern="[A-Za-z]{3,}" title="name must contain only alphabets" placeholder="🧖‍♂️Last name" style="width: 250;height:30;" autofocus required/><br><br>
+                <!-- Phone number: -->
+                <input type="tel" name="phone" pattern="[0-9]{10}" title="number should be in (0-9)" placeholder="📞Phone Number" style="width: 250;height:30;" required/><br><br>
+                <!-- Enter your mail: -->
+                <input type="email" name="mail" placeholder="📧Email" style="width: 250;height:30;" required/><br><br>
+                <!-- Password: -->
+                <input type="password" name="password" title="password should be at least 6 characters long"  placeholder="🔓🔑Password" style="width: 250;height:30;" required/><br><br>
+                <!-- Confirm password: -->
+                <input type="password" name="cpassword" title="confirm password"   placeholder="🔓🔑Confirm Password" style="width: 250;height:30;"required/><br><br>
+                <input id="ab"type="submit" value="SIGN UP">
+            </form>
+        </center>
+        <script>
+        function validform() {
+            var fname = document.sm.name.value;
+            var lname = document.sm.name.value;
+            var pnumber = document.sm.phone.value;
+            var email = document.sm.mail.value;
+            var password = document.sm.password.value;
+            var mpassword = document.sm.cpassword.value;
+            // var dob = new Date(document.sm.dob.value);
+            if(fname ==""){
+                alert("Please provide a valid name");
+                return false;
+            }
+            if(lname ==""){
+                alert("Please provide a valid name");
+                return false;
+            }
+            if(pnumber.length !== 10){
+                alert("Please provide a valid mobile number");
+                return false;
+            }
+            if(email.indexOf('@') == -1 || email.lastIndexOf('.') == -1){
+                // @ mundhara kanisam 1 char vundali adhey -1 last nunchi alage (.)kuda anthey
+                alert("Please provide a valid email address");  
+                return false;
+            }
+            // if(dob > new Date()){
+            //     alert("Please enter a valid date of birth");
+            //     return false;
+            // }
+            if(password.length < 6){
+                alert("Password must contain at least 6 characters");
+                return false;
+            }
+            if(password == mpassword){
+                // alert("Passwords do not match");
+                return true;
+            }
+            else(password!==mpassword);{
+                alert("Passwords do not match");
+                return false
+            }
+            return true;
+        }
+        </script>
+    </body>
+</html> 

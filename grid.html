@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <style>
+           body {
+            background:linear-gradient(50deg,orangered,yellow) ;
+        }
+             .parant{
+                
+                display:grid;
+                /* justify-content:space-evenly; */
+                border: 1px solid black;  
+                border-radius: 10px; 
+                box-shadow: 0 0 40px blue; 
+                /* flex-direction: row;  */
+                width: 700px;
+                height: 500px;  
+                grid-template-columns: 100px,200px,auto;         
+                grid-template-rows: 100px,200px;
+            }
+            .c1{
+                    color:blue;
+                    
+                    box-shadow: 0 0 40px green;
+                    /* width: 100;
+                    height: 100; */
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    grid-template-columns: 100px; 
+                    grid-template-rows: 200px;
+                }
+                .c2{
+                    color:blue;
+                    /* flex-direction: column; */
+                    box-shadow: 10px 20px 60px 1px orangered;
+                    /* width: 100;
+                    height: 100; */
+                    border: 1px solid orangered;
+                    border-radius: 10px;
+                    background-color: white;
+                    align-self: center;
+
+                }
+                .c3,.c4{
+                    color:blue;
+                    /* flex-direction: column; */
+                    box-shadow: 0 0 50px orangered;
+                    /* width: 100;
+                    height: 100; */
+                    border: 2px solid orangered;
+                    border-radius: 10px;
+                    background-color: white;
+                    align-items:self-end;
+
+                }
+                .parant:hover{
+                    box-shadow: 0 0 40px green;
+                }
+                .parant div:nth-child(odd){
+                    background:radial-gradient(yellow,orangered)
+                }
+        </style>
+
+    </head>
+    <body >
+        <div class="parant">
+            <div class="c1">One</div>
+            <div class="c2">TWo</div>
+            <div class="c3">Three</div>
+            <div class="c4">Four</div>
+            <!-- <div class="c2">TWo</div> -->
+            <div class="c3">Three</div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<html>
+<body>
+<p id="demo"></p>
+<script>
+    var js=10;
+    js*=5;
+    document.getElementById("demo").innerHTML=js;
+</script>
+</body>
+</html>

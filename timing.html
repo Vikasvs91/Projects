@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <p id="p1"></p>
+        <script>
+            function time(){
+                var a=new Date();
+                var h=a.getHours();
+                var m=a.getMinutes();
+                var s=a.getSeconds();
+                document.getElementById("p1").innerHTML=h+":"+m+":"+s
+            }
+            setInterval("time()",1000)
+
+        </script>
+    </body>
+    
+</html>

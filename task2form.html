@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <style>
+            fieldset{
+                padding: 10px;
+                background-color: rgb(142, 201, 59);
+                font-style:oblique;
+    
+                
+            }
+            body{
+                background:linear-gradient(200deg,rgb(156, 235, 59),rgb(191, 242, 50));
+            }
+            fieldset input{
+                color: black;
+            }
+            h2{
+                text-align: start;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <form action="form.html">
+            <h2>step 1:Your details</h2>
+            <center>
+                <fieldset>
+                    Name                         :
+                    <input type="text" name="name" autofocus placeholder="First and last name" size=30/><br>
+                </fieldset>
+                <fieldset>
+                    Email                        :
+                    <input type="email" name="email" autofocus placeholder="example@domain.com" size=30  /><br>
+                </fieldset>
+                <fieldset>
+                    Phone                      :
+                    <input type="text" name="Phone" autofocus placeholder="Eg-447500000000" size=30/>
+                </fieldset>
+             
+             <h2>step 2: Delivery address</h2>
+             
+                 <fieldset>
+                     Address                         :
+                     <textarea name="address" id="" cols="30" rows="10"></textarea>
+                 </fieldset>
+                 <fieldset>
+                     Post Code                        :
+                     <input type="text"  size=30  /><br>
+                 </fieldset>
+                 <fieldset>
+                     Country                      :
+                     <input type="text"  size=30/>
+                 </fieldset>
+              
+              <h2>step 3:Card details</h2>
+              
+                <fieldset>
+                    Card type                        :<br>
+                    <input type="radio" name="card" id="VISA" value="VISA"/>VISA
+                    <input type="radio" name="card" id="Mastercard" value="Mastercard"/>Mastercard
+                    <input type="radio" name="card" id="AmEx" value="AmEx"/>AmEx
+                </fieldset>
+                  <fieldset>
+                      Card number                        :
+                      <input type="text"  size=30/><br>
+                  </fieldset>
+                  <fieldset>
+                      Security Code                        :
+                      <input type="cod" size=30  /><br>
+                  </fieldset>
+                  <fieldset>
+                      Name on card                      :
+                      <input type="text"  size=30/>
+                  </fieldset>
+            </center> 
+            <center><input type="button" value="BUY IT!" style="background-color:rgba(0, 0, 0, 0.829) ;color: aliceblue;font-size: 20;width: 150;"></center> 
+
+        </form>
+    </body>
+</html>

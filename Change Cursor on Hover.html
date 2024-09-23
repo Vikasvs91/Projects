@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: black;
+                justify-content: center;
+                display:flex;
+                align-items: center; 
+
+            }
+            
+            ul{
+                display: flex;
+                flex-direction: column;
+                /* border: 3px solid #73AD21; */
+
+            }
+            a{
+                text-decoration: none;
+                font-size:4em ;
+                position: relative;
+                display: inline-block;
+                margin: 100px 0;
+                color: antiquewhite;
+                transition: 1s;
+                /* border: 3px solid #73AD21; */
+
+            }
+            .cursor{
+                position: fixed;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: antiquewhite;
+                transition: 0.1s;
+                transform: translate(-50% , -50%);
+                pointer-events:none;
+                mix-blend-mode:difference;
+            }
+            ul li:hover~.cursor{
+                transform: scale(6);
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <ul>
+            <li><a href="#">Home </a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Email</a></li>
+            <div class="cursor"></div>
+        </ul>
+        
+        <script>
+            const cursor=document.querySelector('.cursor');
+            document.addEventListener('mousemove',(vikas)=>{
+                cursor.style.left=vikas.pageX+'px';
+                cursor.style.top=vikas.pageY+'px';
+
+            })
+        </script>
+    </body>
+</html>
